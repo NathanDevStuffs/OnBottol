@@ -1320,9 +1320,19 @@
       }
     }
     </style>
+    <style>
+    #loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+</style>
 <title>Green Bottle Labs</title>
 </head>
-<body style="">
+<body onload="load()">
+  <div id="content" style="display: none;">
     <header>
       <a href="#" class="logo"><img src="bottle.png" style="
     width: 50px;
@@ -1348,5 +1358,20 @@
         navbar.classList.toggle('open');
       }
   </script>
+  </div>
+<div id="loader"><div class="dot-pulse"></div></div>
+
+<script>
+var myVar;
+
+function load() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("content").style.display = "block";
+}
+</script>
 </body>
 </html>
