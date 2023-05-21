@@ -1329,10 +1329,49 @@
 }
 
 </style>
+  <style>
+    
+        .expbutton {
+      transition: all .50s ease;
+          
+          position: relative;
+    left: 250px;
+    align-content: center;
+    border-radius: 25px;
+    width: 150px;
+    height: 40px;
+    background: rgb(78,78,78);
+    font-family: 'Montserrat';
+    font-weight: 400;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: var(--main-color);
+    }
+    
+    .expbutton :hover{
+            transition: all .50s ease;
+
+          position: relative;
+    left: 250px;
+    align-content: center;
+    border-radius: 25px;
+    width: 170px;
+    height: 60px;
+    background: rgb(78,78,78);
+    font-family: 'Montserrat';
+    font-weight: 400;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: var(--main-color);     
+      
+    }
+  </style>
 <title>Green Bottle Labs</title>
 </head>
 <body onload="load()">
-  <div id="content" style="display: none;">
+  <div id="content" style="display: block;">
     <header>
       <a href="#" class="logo"><img src="bottle.png" style="
     width: 50px;
@@ -1347,7 +1386,7 @@
     </ul>
     
     <div class="main">
-<i class='bx bx-menu-alt-right' id="menu-icon"></i>    </div>
+<i class="bx bx-menu-alt-right" id="menu-icon"></i>    </div>
     </header>
     <script>
       let menu = document.querySelector('#menu-icon');
@@ -1358,6 +1397,32 @@
         navbar.classList.toggle('open');
       }
   </script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><section><h1 style="
+    left: 50px;
+    position: relative;
+    text-align: left;
+    display: inline;
+    font-size: 1.7rem;
+    font-weight: 600;
+">We make
+</h1><h1 style="
+    left: 50px;
+    position: relative;
+    text-align: left;
+    display: inline;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #83fc47;
+">GREAT
+</h1><h1 style="
+    left: 50px;
+    position: relative;
+    text-align: left;
+    display: inline;
+    font-size: 1.7rem;
+    font-weight: 600;
+">experiences on Roblox
+</h1><br><br><br><br><button class="expbutton">Experiences</button></section>
   </div>
 <div id="loader"><div class="dot-pulse"></div></div>
 
