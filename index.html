@@ -1240,6 +1240,11 @@
     }
     
     .main {
+      visibility: visible;
+      background-color: #060e1a;
+      border-radius: 50px;
+      height: 50px;
+      width: 50px;
       display: flex;
       align-items: center;
     }
@@ -1261,6 +1266,7 @@
     }
     
     #menu-icon{
+      margin: auto;
       font-size: 35px;
       color: var(--text-color);
       cursor: pointer;
@@ -1283,6 +1289,10 @@
     @media (max-width: 1090px){
       #menu-icon{
         display: block;
+      }
+
+      .menu {
+        visibility: visible;
       }
       .navbar{
         position: absolute;
