@@ -137,10 +137,15 @@
  font-family: 'Rubik';
  height: 50px;
  float: left; 
-visibility: hidden;
+display: none;
     }
 
+.topli {
+  margin-top: unset;
+}
+
 li {
+margin-bottom: unset;
 background-color: unset;
  border-radius: unset; 
 width: unset; 
@@ -173,10 +178,15 @@ height: unset;
     @media (max-width: 1090px){
 
 .emp-button {
-  visibility: visible;
+  display: block;
+}
+
+.topli {
+  margin-top: 25px;
 }
 
       li {
+margin-bottom: 20px;
 background-color: #060e1a;
  border-radius: 50px; 
 width: 250px; 
@@ -273,7 +283,7 @@ height: 50px;
     width: 50px;
 "><span>Green Bottle Labs</span></a>
     <ul class="navbar">
-    <li><a href="#" class="active">Home</a></li>
+    <li class="topli"><a href="#" class="active">Home</a></li>
     <li><a href="#">Contact</a></li>
     <li><a href="#">Discord Server</a></li>
     <li><a href="#">Roblox Group</a></li>
