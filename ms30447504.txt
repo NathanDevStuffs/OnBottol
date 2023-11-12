@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "greenbottlelabs.us.to",
+  "Id": "e850148d-1a26-4191-9f04-cf274395cb60"
+}
