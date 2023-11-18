@@ -11,7 +11,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
 <link href="/three-dots.css" rel="stylesheet">
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDo0CFe6ZUd5sDENhsXRkEEQFUuJKaVqjY",
+    authDomain: "green-bottle-labs.firebaseapp.com",
+    projectId: "green-bottle-labs",
+    storageBucket: "green-bottle-labs.appspot.com",
+    messagingSenderId: "891892451566",
+    appId: "1:891892451566:web:ab3ed8cc49c5c306edcbff",
+    measurementId: "G-7JTPXQGKWY"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
   <style>
 /* width */
 ::-webkit-scrollbar {
