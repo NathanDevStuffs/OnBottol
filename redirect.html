@@ -66,7 +66,7 @@
       if (urlParams == "?youtube") {
         window.location.href = "https://www.youtube.com/@GreenBottleLabs"
       } else {
-        const alert = document.getElementsByClassName("alert");
+        const alert = document.getElementById("alert");
         alert.style.display = "block";
         setTimeout(function(){
             window.location.href = "https://greenbottlelabs.us.to"
@@ -74,7 +74,7 @@
       }
       }
   </script></head><body onload="redirect();">
-  <div class="alert" style="display: none;">
+  <div class="alert" id="alert" style="display: none;">
   <span class="closebtn" style="opacity: 1 !important;">&times;</span>  
   <strong style="opacity: 1 !important;">Uh Oh!</strong> This redirect link is invalid! We'll send you back home in 5 seconds!
 </div>
