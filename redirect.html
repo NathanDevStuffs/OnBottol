@@ -27,7 +27,17 @@
       color: var(--text-color);
       font-family: Montserrat;
     }
-</style></head><body>
+</style></head><body onload="redirect();">
   <div id="loader"><div class="dot-pulse"></div></div>
+  <script>
+    function redirect(); {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams == "?youtube") {
+        window.location.href = "https://www.youtube.com/@GreenBottleLabs"
+        else {
+      }
+      }
+    }
+  </script>
   </body>
 </html>
