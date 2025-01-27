@@ -67,7 +67,7 @@
 </style>
   <script>
     function redirect() {
-      const urlParams = new URLSearchParams(window.location.search);
+      const urlParams = window.location.search;
       if (urlParams == "?youtube") {
         const success = document.getElementById("success");
         success.style.display = "block";
