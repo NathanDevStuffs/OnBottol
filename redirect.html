@@ -32,6 +32,9 @@
       font-family: Montserrat;
     }
   .alert {
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 400px;
   position: fixed;
   margin: 0 auto;
   top: 5px;
@@ -66,6 +69,8 @@
     function redirect() {
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams == "?youtube") {
+        const success = document.getElementById("success");
+        success.style.display = "block";
         window.location.href = "https://www.youtube.com/@GreenBottleLabs"
       } else {
         const alert = document.getElementById("alert");
@@ -76,6 +81,10 @@
       }
       }
   </script></head><body onload="redirect();">
+    <div class="alert success" id="success" style="display: none;">
+  <span class="closebtn" style="opacity: 1 !important;">&times;</span>  
+  <strong style="opacity: 1 !important;">Success!</strong> Redirecting you to your destination!
+</div>
   <div class="alert" id="alert" style="display: none;">
   <span class="closebtn" style="opacity: 1 !important;">&times;</span>  
   <strong style="opacity: 1 !important;">Uh Oh!</strong> This redirect link is invalid! We'll send you back home in 5 seconds!
