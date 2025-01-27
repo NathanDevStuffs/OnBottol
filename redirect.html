@@ -59,12 +59,7 @@
 .closebtn:hover {
   color: black;
 }
-</style></head><body onload="redirect();">
-  <div class="alert" style="display: none;">
-  <span class="closebtn" style="opacity: 1 !important;">&times;</span>  
-  <strong style="opacity: 1 !important;">Uh Oh!</strong> This redirect link is invalid! We'll send you back home in 5 seconds!
-</div>
-  <div id="loader"><div class="dot-pulse"></div></div>
+</style>
   <script>
     function redirect(); {
       const urlParams = new URLSearchParams(window.location.search);
@@ -76,6 +71,12 @@
       }
       }
     }
-  </script>
+  </script></head><body onload="redirect();">
+  <div class="alert" style="display: none;">
+  <span class="closebtn" style="opacity: 1 !important;">&times;</span>  
+  <strong style="opacity: 1 !important;">Uh Oh!</strong> This redirect link is invalid! We'll send you back home in 5 seconds!
+</div>
+  <div id="loader"><div class="dot-pulse"></div></div>
+  
   </body>
 </html>
