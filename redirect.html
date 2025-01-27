@@ -1,6 +1,8 @@
 <!DOCTYPE Html>
 <html>
-  <head><link href="/three-dots.css" rel="stylesheet">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/three-dots.css" rel="stylesheet">
 <title>Redirect - Green Bottle Labs</title><style>
       *{
       padding: 0;
@@ -27,7 +29,41 @@
       color: var(--text-color);
       font-family: Montserrat;
     }
+  .alert {
+  position: fixed;
+  margin: 0 auto;
+  top: 5px;
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+  border-radius: 50px;
+}
+
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
 </style></head><body onload="redirect();">
+  <div class="alert" style="display: none;">
+  <span class="closebtn" style="opacity: 1 !important;">&times;</span>  
+  <strong style="opacity: 1 !important;">Uh Oh!</strong> This redirect link is invalid! We'll send you back home in 5 seconds!
+</div>
   <div id="loader"><div class="dot-pulse"></div></div>
   <script>
     function redirect(); {
@@ -35,6 +71,8 @@
       if (urlParams == "?youtube") {
         window.location.href = "https://www.youtube.com/@GreenBottleLabs"
         else {
+        const alert = document.getElementByClassName("alert");
+        alert.style = "display: block;"
       }
       }
     }
