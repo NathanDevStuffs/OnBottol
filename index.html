@@ -68,6 +68,132 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
+	   <style>
+    :root {
+    --bg-color: rgb(0,0,0);
+    --card-bg: #0c1628;
+    --text-color: #fff;
+    --main-color: #83fc47;
+    --gray-text: #9ca3af;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.latest-games {
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.game-card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(131,252,71,0.3);
+}
+
+.game-image {
+    width: 100%;
+    height: 16rem;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-content {
+    padding: 1.5rem;
+}
+
+.game-content h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.game-content p {
+    color: var(--gray-text);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.game-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-count {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-text);
+}
+
+.play-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--main-color);
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+}
+
+/* SVG Styles */
+svg {
+    vertical-align: middle;
+}
+</style>
   <style>
 /* width */
 ::-webkit-scrollbar {
@@ -396,7 +522,70 @@ height: 50px;
     background: #060e1a;
     height: 750px;
     margin-top: -5px;
-"></div></section>
+"><div class="container">
+            <h2>Latest Experiences</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1550745165?auto=format&amp;fit=crop&amp;q=80" alt="Game 1">
+                    </div>
+                    <div class="game-content">
+                        <h3>Adventure Quest 1</h3>
+                        <p>Experience the thrill of an epic adventure in our latest Roblox game.</p>
+                        <div class="game-footer">
+                            <div class="player-count">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                <span>10k+ players</span>
+                            </div>
+                            <button class="play-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1550745166?auto=format&amp;fit=crop&amp;q=80" alt="Game 2">
+                    </div>
+                    <div class="game-content">
+                        <h3>Adventure Quest 2</h3>
+                        <p>Experience the thrill of an epic adventure in our latest Roblox game.</p>
+                        <div class="game-footer">
+                            <div class="player-count">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                <span>10k+ players</span>
+                            </div>
+                            <button class="play-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1550745167?auto=format&amp;fit=crop&amp;q=80" alt="Game 3">
+                    </div>
+                    <div class="game-content">
+                        <h3>Adventure Quest 3</h3>
+                        <p>Experience the thrill of an epic adventure in our latest Roblox game.</p>
+                        <div class="game-footer">
+                            <div class="player-count">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                <span>10k+ players</span>
+                            </div>
+                            <button class="play-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></div></section>
 
   </div>
 <div id="loader"><div class="dot-pulse"></div></div>
