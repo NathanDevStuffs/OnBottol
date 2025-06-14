@@ -7,10 +7,29 @@
     <input type="hidden" name="_next" value="https://onbottol.lol/form-success.html">
     <input type="hidden" name="_captcha" value="false">
 
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAABhDewyF2AzAuAat"></div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAABhDewyF2AzAuAat"
+data-callback="onTurnstileSuccess"
+           data-expired-callback="onTurnstileExpired"
+           data-error-callback="onTurnstileError">></div>
 
 
 
-     <button type="submit">Send</button>
-</form></body>
+     <button type="submit" disabled>Send</button>
+</form>
+
+<script>
+      const submitBtn = document.getElementById('submitBtn');
+
+      function onTurnstileSuccess(token) {
+        submitBtn.disabled = false;
+      }
+
+      function onTurnstileExpired() {
+        submitBtn.disabled = true;
+      }
+
+      function onTurnstileError() {
+        submitBtn.disabled = true;
+      }
+    </script></body>
 </html>
