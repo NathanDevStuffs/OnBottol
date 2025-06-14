@@ -12,7 +12,7 @@
 </script>
 <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js"
     data-culture="EN" data-gcm-version="2.0" type="text/javascript"></script>
-	<elevenlabs-convai agent-id="32KnIs9DpcVNmP9RXBHp"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+
   <link rel="icon" type="image/x-icon" href="/bottle.png">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.5.0/styles/overlayscrollbars.min.css" integrity="sha512-y2X7/N2/LOvn3Xay60PkD1YqTQv34lOyR1qX1CT7+2sEXmnKjYj33kEn0bXzbk4+y8Q9leu2g7EqGWiBNv1NkA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -486,6 +486,7 @@ height: 50px;
   justify-content: center;
   align-items: center;
   height: 100vh;
+flex-direction: column;
 }
 
 </style>
@@ -515,7 +516,7 @@ height: 50px;
 
 <title>Form Submitted - OnBottol</title>
 </head>
-<body>
+<body onload="load()">
   <div id="content" style="display: none;">
     <header style="white-space: nowrap;">
       <a href="#" class="logo"><img src="bottle.png" style="
@@ -547,13 +548,25 @@ height: 50px;
       }
   </script>
   </div>
-  <div id="loader"><div class="dot-flashing"></div></div>
+  <div id="loader"><div class="dot-flashing"></div><br><h5 id="statusMessage">Sending it off! 🚀</h5></div>
 
 <script>
 var myVar;
 
 function load() {
   myVar = setTimeout(showPage, 3000);
+
+  const messages = [
+    "Sending it off! 🚀",
+    "Just a sec, making magic happen ✨",
+    "Almost done... maybe 👀",
+    "Just one more line 🧑‍💻",
+  ];
+
+  const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+
+  // Set the message
+  document.getElementById("statusMessage").innerText = randomMsg;
 }
 
 function showPage() {
